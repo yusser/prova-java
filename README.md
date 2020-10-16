@@ -27,7 +27,10 @@ Para requisitar o serviço desenvolvido, basta requistar a endpoint (http://loca
 
 Será retornado o resultado conforme exemplo a seguir:
 ```json
+// request exemplo:
+// http://localhost:8080/imc/calcular/102.00/1.80
+
 {
-"resultado": 31.48
+   "resultado": 31.48
 }
 ```
