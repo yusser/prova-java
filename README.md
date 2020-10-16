@@ -21,3 +21,13 @@ O candidato deve ser implementar 2 desafios:
     - Retornar o nome todo em letras maiúsculas.
     - Retornar o nome abreviado. Exemplo: Se o nome for "João Soares Silva", retornar "João S. Silva".
 
+---
+
+Para requisitar o serviço desenvolvido, basta requistar a endpoint (http://localhost:8080/imc/calcular/{peso}/{altura}).
+
+Será retornado o resultado conforme exemplo a seguir:
+```json
+{
+"resultado": 31.48
+}
+```
