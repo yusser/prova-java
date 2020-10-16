@@ -34,3 +34,6 @@ Será retornado o resultado conforme exemplo a seguir:
    "resultado": 31.48
 }
 ```
+
+Este exemplo também pode ser visualizado pelo Swagger através do endereço:
+> http://localhost:8080/swagger-ui.html

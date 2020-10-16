@@ -11,7 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.confidencecambio.javabasico.api.dto.ImcResponse;
 import br.com.confidencecambio.javabasico.domain.service.ImcService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 
+@Api(tags = "Calculadora IMC")
 @RestController
 @RequestMapping("/imc")
 public class ImcController {
@@ -19,9 +23,10 @@ public class ImcController {
     @Autowired
     private ImcService imcService;
 
+    @ApiOperation("Calcula o IMC com base na Peso e Altura")
     @GetMapping("/calcular/{peso}/{altura}")
-    public ResponseEntity<ImcResponse> calcular(@PathVariable BigDecimal peso,
-            @PathVariable BigDecimal altura) {
+    public ResponseEntity<ImcResponse> calcular(@ApiParam("peso") @PathVariable BigDecimal peso,
+    @ApiParam("altura") @PathVariable BigDecimal altura) {
         var resultado = imcService.calcular(peso, altura);
         var imcResponse = new ImcResponse(resultado);
 
